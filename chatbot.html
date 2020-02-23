@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            know = {
+                "hi" : "hi! Do you want help with scholarships, getting involved on campus, or resources for minorities?",
+                "scholarships" : "You can go to admissions and check out the scholarships that they have and see if you qualify for them!",
+                "getting involved on campus" : "You can go on heellife.com to learn more about the organizations on campus!",
+                "resources for minorities" : "Are you a first generation, or LGBTQ+?",
+                "first generation" : "At UNC, there is a community that is called Carolina's first that you may qualify for. Check out our interactive game for more information",
+                "LGBTQ+" : "You can check this website lgbtq.unc.edu and our interactive game for more information",
+                "thank you" : "You're welcome!"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+                }
+            } 
+        </script>
+    </head>
+    <body>
+        <p id="chatLog">- - C H A T - -<br>please type hi to start<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+    </body>
+</html>

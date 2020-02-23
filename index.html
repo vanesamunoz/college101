@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name= "viewport" content="width=device-width, initital-scale=1.0">
+        <meta http-equiz="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="main.css">
+        <title>College 101</title>
+        <link href="style.css" rel="stylesheet">
+
+        <script>
+            know = {
+                "Hi" : "hi! Do you want help with scholarships, getting involved on campus, or resources for minorities?",
+                "scholarships" : "You can go to admissions and check out the scholarships that they have and see if you qualify for them!",
+                "getting involved on campus" : "You can go on heellife.com to learn more about the organizations on campus!",
+                "resources for minorities" : "Are you a first generation, LGBTQ+, or a woman?",
+                "first generation" : "At UNC, there is a community that is called Carolina's first that you may qualify for. Check out our interactive game for more information",
+                "LGBTQ+" : "You can check this website lgbtq.unc.edu and our interactive game for more information",
+                "woman" : "At UNC, there is the women's center that you can get connected to!",
+                "thank you" : "You're welcome!"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+                }
+            } 
+        </script>
+    </head>
+    <body>
+        <header class="main-header">
+                <div class="container-logo">
+                    <h1 class="logo">
+                        <img class="imagelogo" src="PearlHacksLogo.jpg">
+                    </h1> 
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="firstgen.html">First Gen</a></li>
+                        <li><a href="LGBTQ.html">LGBTQ</a></li>
+                        <li><a href="safety.html">Safety</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <div class="description-grid">
+            <div class="description">
+                <div class="description-container">
+                <h1 class="about">
+                    About College 101
+                </h1>
+              
+                    <img class="oldwell" src="oldwell.jpg">
+        
+                <p style="text-align: center;" class="words">
+                    It is easy to come to college and feel like you don't have a place on campus. </br>
+                    When you're a minority, it's infinitely harder to find others like you and truly connect to people. </br>
+                    You may not know who to go to or don't have that support group like many others do. </br>
+                    Click on the tabs in the top right corner to get started! </br>
+                    If you want additional resources, interact with our chatbot below! 
+                </p>
+            </div>
+        </div>
+        </div>
+        <div style="text-align: center; background-color: rgb(123, 189, 228);">
+        <p style="background-color: rgb(123, 189, 228); text-align: center;" id="chatLog">- - C H A T - -<br>Please Type Hi To Start<br></p>
+        <input style="background-color: rgb(123, 189, 228); text-align: center;"  id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+     </div>
+    </body>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-flex">
+                <h2>By: Vanesa, Tarini, Megan, and Maanasa</h2>
+            </div>
+        </div>
+    </footer>
+</html>
